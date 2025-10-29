@@ -65,32 +65,28 @@
                                 <td>
                                     <strong>Objetivos de Aprendizaje</strong>
                                     <ul>
-                                        <li>Al final de la sesión, los estudiantes podrán:
-                                            <ul>
-                                                <li>Aprender los comandos de Python para controlar la postura del XGO.</li>
-                                                <li>Comprender qué es una IMU y el concepto de propiocepción.</li>
-                                                <li>Entender cómo los bucles de control permiten al robot equilibrarse.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Objetivo General de la Sesión:</strong> Que los estudiantes programen el control preciso de la postura del XGO.</li>
+                                        <li>Comprender los <strong>grados de libertad</strong> aplicados a las patas.</li>
+                                        <li>Usar la <strong>API</strong> para definir, guardar y reproducir <strong>poses</strong>.</li>
+                                        <li>Relacionar <strong>cinemática directa e inversa</strong> con el movimiento.</li>
+                                        <li>Aplicar poses para <strong>estabilidad</strong> o <strong>expresión corporal</strong>.</li>
                                     </ul>
                                     <h4>Vocabulario Clave:</h4>
                                     <ul>
-                                      <li><b>IMU (Unidad de Medición Inercial):</b> El sensor que le da al robot su sentido del equilibrio.</li>
-                                      <li><b>Propiocepción:</b> La habilidad de un sistema (como un cuerpo o un robot) para sentir la posición de sus propias partes.</li>
-                                      <li><b>Bucle de Control:</b> Un proceso continuo donde el robot lee sus sensores y ajusta sus motores para mantenerse estable.</li>
+                                      <li><b>Grados de Libertad (DoF):</b> Cada articulación independiente en una pata del robot.</li>
+                                      <li><b>Pose:</b> Una configuración específica y guardada de todas las articulaciones del robot.</li>
+                                      <li><b>Cinemática Inversa:</b> El cálculo que hace el robot para saber cómo mover sus articulaciones para que su pata llegue a un punto en el espacio.</li>
                                     </ul>
                                     <strong>Secuencia de Clase</strong>
                                     <ul>
                                         <li>⚡Saludo de I.A. con todos</li>
-                                        <li>⚡A.I. GYM (Análisis Profundo)</li>
-                                        <li>⚡VIBE CODING (Exploración Individual de Posturas)</li>
+                                        <li>⚡A.I. GYM (Análisis de Poses y Cinemática)</li>
+                                        <li>⚡VIBE CODING (Diseño Individual de Poses)</li>
                                         <li>⚡ANÁLISIS DE CÓDIGO Y PLANIFICACIÓN DE PRUEBAS</li>
                                         <li>⚡GNIUS STORM (Cierre de la Sesión)</li>
                                     </ul>
                                     <strong>Entregable Clave</strong>
                                     <ul>
-                                        <li><strong>Plan de Control Postural</strong> documentado por cada equipo, listo para ser implementado en la próxima sesión.</li>
+                                        <li><strong>Catálogo de Poses</strong> documentado por cada equipo, listo para ser implementado en la próxima sesión.</li>
                                     </ul>
                                 </td>
                                 <td>
@@ -134,7 +130,7 @@
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Hola, Ingenieros de Control! 👋 ¡Bienvenidos a una misión de <strong>equilibrio</strong> y <strong>precisión</strong>! Hoy vamos a descubrir uno de los superpoderes secretos del XGO: cómo se mantiene siempre de pie. Antes de empezar, vamos a activar a nuestro amigo <strong>Xolo</strong>. Por favor, salúdenlo en el chat y díganle su nombre y cuáles son sus gustos e intereses. Por ejemplo 'Hola Xolo, soy Sofía y me encanta la gimnasia y cómo los atletas mantienen el equilibrio'.</p>
+                                <p class="dialogue assistant">¡Hola, escultores de robots! 👋 ¡Bienvenidos a una misión sobre <strong>poses</strong> y <strong>control preciso</strong>! Hoy vamos a enseñarle al XGO a adoptar posturas específicas, como un gimnasta. Antes de empezar, activen a nuestro amigo <strong>Xolo</strong>. Salúdenlo en el chat con su nombre y algo que les interese. Por ejemplo, "Hola Xolo, soy David y me gusta dibujar personajes en diferentes poses".</p>
                             </div>
                         </div>
                     </div>
@@ -146,7 +142,7 @@
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Fantástico, veo que Xolo ya está en sintonía con ustedes! Asegúrense de que todos hayan escrito su nombre y sus gustos. Si Xolo no les ha respondido, ¡avísenme!</p>
+                                <p class="dialogue assistant">¡Fantástico, veo que Xolo ya está listo para posar con ustedes! Asegúrense de que todos hayan escrito su nombre y sus gustos. Si Xolo no les ha respondido, ¡avísenme!</p>
                             </div>
                         </div>
                     </div>
@@ -154,19 +150,20 @@
             </div>
 
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2 A.I. GYM (Análisis Profundo) ⏰ 12 minutos</h2>
-                <p><strong>Propósito</strong> Introducir los conceptos de IMU, propiocepción y la "caja negra" de la auto-estabilización, junto con los nuevos comandos de control postural.</p>
+                <h2>⚡ Actividad 2 A.I. GYM (Análisis de Poses y Cinemática) ⏰ 12 minutos</h2>
+                <p><strong>Propósito</strong> Introducir los conceptos de grados de libertad por pata, cinemática inversa y la API para grabar y reproducir poses.</p>
                 <div class="steps">
                     <div class="step-card">
                         <div class="step-content">
                             <h3>Paso 1: Presentación Conceptual y Comando para Xolo ⏰ 6 minutos</h3>
-                            <p>(Proyectar Diapositiva 3) Presenta el misterio del equilibrio y luego instruye a los alumnos sobre cómo pedirle la explicación detallada a Xolo.</p>
+                            <p>(Proyectar Diapositiva 3) Presenta el desafío de controlar las patas individualmente y guía a los alumnos para que pidan la explicación a Xolo.</p>
                         </div>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Excelente! Ahora que todos estamos listos, vamos al <strong>A.I. GYM</strong>. Equipos, hoy vamos a explorar uno de los superpoderes más impresionantes del XGO: su increíble sentido del <strong>equilibrio</strong>. ¿Alguna vez se han preguntado cómo pueden mantenerse de pie sin caerse, incluso con los ojos cerrados? Tienen un 'sensor' en su oído interno que les dice si están derechos o inclinados. ¡El XGO tiene algo muy parecido llamado <strong>IMU</strong>!</p>
-                                <p class="dialogue assistant">Para que la explicación sea personalizada para ustedes, escriban en el chat el siguiente comando: <strong>"Mi perfil es [escribe aquí tu perfil] y quiero que me enseñes sobre propiocepción y bucles de control, y cómo sabe el robot XGO si está equilibrado usando su IMU. Para controlarlo, muéstrame los comandos de Python body_height, body_rotation y body_translation."</strong></p>
+                                <p class="dialogue assistant">¡Excelente! Ahora vamos al <strong>A.I. GYM</strong>. Ya hemos hecho que el robot camine y se equilibre, pero ¿cómo le decimos exactamente dónde poner una pata? Cada pata del XGO tiene 3 articulaciones, es decir, 3 <strong>grados de libertad</strong>. ¡Controlar las 4 patas a la vez es un problema matemático complejo!</p>
+                                <p class="dialogue assistant">Este problema se llama <strong>cinemática inversa</strong>: nosotros le decimos al robot "quiero que tu pata esté en la coordenada X, Y, Z", y su cerebro calcula los ángulos exactos de cada articulación para lograrlo. Por suerte, la <strong>API</strong> del robot lo hace por nosotros. Hoy aprenderemos a usarla para crear y guardar <strong>poses</strong>.</p>
+                                <p class="dialogue assistant">Para que la explicación sea personalizada, escriban en el chat el siguiente comando: <strong>"Xolo, mi perfil es [escribe aquí tu perfil] y necesito programar al XGO para crear y guardar posturas específicas. Quiero comprender cómo controlar cada pierna y usar la cinemática sin calcular ángulos manuales gracias a la API. Enséñame el código para grabar y reproducir poses estables.'"</strong></p>
                             </div>
                         </div>
                     </div>
@@ -178,9 +175,8 @@
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">(Mientras los alumnos interactúan con Xolo) ¡Muy bien! Xolo les está explicando que la <strong>IMU (Unidad de Medición Inercial)</strong> es el sentido del equilibrio del robot y que la <strong>propiocepción</strong> es su 'sexto sentido' para saber dónde están sus propias patas y cuerpo. También les está mostrando los nuevos comandos como <strong>`body_height()`</strong>, <strong>`body_rotation()`</strong> y <strong>`body_translation()`</strong> para controlar la <strong>postura</strong>.</p>
-                                <p class="dialogue assistant">Les está contando cómo la <strong>auto-estabilización</strong> es una <strong>'caja negra'</strong> que funciona gracias a un <strong>bucle de control</strong> súper rápido. ¡Nosotros podemos usar esa tecnología con comandos muy simples! ¡Es fascinante!</p>
-                                <p class="dialogue assistant">Si algo no queda claro, ¡recuerden que pueden preguntarle directamente a Xolo! Prueben con <br><strong>'¿Qué es un giroscopio?'</strong><br><strong>'¿Cuál es la diferencia entre rotación y traslación?'</strong><br><strong>'¿Qué ejes controlan `body_rotation`?'</strong></p>
+                                <p class="dialogue assistant">(Mientras los alumnos interactúan con Xolo) ¡Muy bien! Xolo les está explicando cómo la <strong>cinemática inversa</strong> es la "magia" que nos permite controlar la posición de las patas fácilmente. ¡Es una <strong>caja negra</strong> matemática muy poderosa!</p>
+                                <p class="dialogue assistant">Fíjense en los comandos que les muestra: <strong>`xgo.set_leg_position()`</strong> para controlar una pata individual, y lo más importante, <strong>`xgo.record_pose()`</strong> para guardar una pose y <strong>`xgo.set_to_pose()`</strong> para reproducirla. ¡Es como tomarle una foto a la postura del robot y luego mostrársela para que la imite!</p>
                             </div>
                         </div>
                     </div>
@@ -188,18 +184,18 @@
             </div>
 
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3 VIBE CODING (Exploración Individual de Posturas) ⏰ 14 minutos</h2>
-                <p><strong>Propósito</strong> Permitir a los estudiantes diseñar creativamente secuencias de control postural y obtener el código Python correspondiente de la IA.</p>
+                <h2>⚡ Actividad 3 VIBE CODING (Diseño Individual de Poses) ⏰ 14 minutos</h2>
+                <p><strong>Propósito</strong> Permitir a los estudiantes diseñar creativamente poses para estabilidad o expresión y obtener el código Python correspondiente de la IA.</p>
                 <div class="steps">
                     <div class="step-card">
                         <div class="step-content">
                             <h3>Paso 1: Instrucción del Profesor ⏰ 4 minutos</h3>
-                            <p>(Proyectar Diapositiva 6) Motiva a los alumnos a convertirse en "diseñadores de control" y a describir sus ideas a Xolo.</p>
+                            <p>(Proyectar Diapositiva 6) Motiva a los alumnos a convertirse en "diseñadores de poses" y a describir sus ideas a Xolo.</p>
                         </div>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Muy bien, con esos conceptos claros, es momento de ser creativos! Ahora, serán <strong>diseñadores de control postural</strong>. Piensen en una secuencia de 2 o 3 movimientos para crear un <strong>'ejercicio de equilibrio'</strong> o una <strong>'secuencia de control'</strong>. Descríbanle su 'vibe' a Xolo. Si no se les ocurre nada, ¡no hay problema! Escriban en el chat con Xolo el comando exacto: <strong>'Exploremos ideas juntos'</strong>.</p>
+                                <p class="dialogue assistant">¡Muy bien, con esos conceptos claros, es momento de ser creativos! Ahora, serán <strong>'diseñadores de poses'</strong>. Piensen en una <strong>pose</strong> específica que quieran que el XGO adopte. Puede ser una pose de ataque, una para estar más estable, o una divertida como levantar una pata. Descríbanle su 'vibe' a Xolo, y él les dará el código para crearla. Si no se les ocurre nada, ¡no hay problema! Escriban en el chat con Xolo el comando exacto: <strong>'Exploremos ideas juntos'</strong>.</p>
                             </div>
                         </div>
                     </div>
@@ -212,26 +208,33 @@
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
                                 <p class="dialogue assistant">Basado en esa petición, Xolo podría generar un código para ejecutar su idea. ¡Fíjense bien en cómo se estructura!</p>
-                                <p class="dialogue assistant">Para una vibe como "quiero que el XGO se incline a la izquierda, luego a la derecha, y después baje y suba el cuerpo como si hiciera una sentadilla", Xolo generaría este código:</p>
-                                <pre class="dialogue assistant" style="color: #d32f2f;"># Secuencia de Inclinación y Altura
+                                <p class="dialogue assistant">Para una vibe como "quiero crear una pose donde el robot levanta su pata delantera derecha como si fuera a dar la mano", Xolo generaría este código:</p>
+                                <pre class="dialogue assistant" style="color: #d32f2f;"># Pose: Dar la Pata
 import xgo, time
-xgo.body_rotation(['y', 15])  # Rotación en eje Y (roll) a la derecha
+# Número de la pata: 1=Frontal Derecha, 2=Frontal Izquierda, 3=Trasera Derecha, 4=Trasera Izquierda
+# Coordenadas: [x, y, z] desde el hombro
+xgo.set_leg_position(1, 0, -60, -50) # Levanta y adelanta la pata 1
+time.sleep(2)
+# Grabar esta pose con el número 1
+xgo.record_pose(1) 
+print("Pose 'Dar la Pata' grabada con el número 1")
 time.sleep(1)
-xgo.body_rotation(['y', -15]) # Rotación en eje Y (roll) a la izquierda
-time.sleep(1)
-xgo.body_rotation(['y', 0])   # Volver al centro
-time.sleep(1)
-xgo.body_height(-20) # Bajar altura del cuerpo
-time.sleep(1)
-xgo.body_height(0)  # Volver a la altura normal</pre>
-                                <p class="dialogue assistant">Y para una vibe como "quiero que desplace su cuerpo hacia adelante y atrás sin caminar", este sería el código:</p>
-                                <pre class="dialogue assistant" style="color: #d32f2f;"># Desplazamiento Postural
+# Volver a la normalidad
+xgo.stand()</pre>
+                                <p class="dialogue assistant">Y para una vibe como "quiero que adopte una postura más ancha y baja para máxima estabilidad", este sería el código:</p>
+                                <pre class="dialogue assistant" style="color: #d32f2f;"># Pose: Postura Ancha
 import xgo, time
-xgo.body_translation(['x', 20]) # Traslación en eje X (adelante)
-time.sleep(0.5)
-xgo.body_translation(['x', -20]) # Traslación en eje X (atrás)
-time.sleep(0.5)
-xgo.body_translation(['x', 0]) # Volver al centro</pre>
+# Mover cada pata hacia afuera y un poco hacia abajo
+xgo.set_leg_position(1, 0, -80, -70)
+xgo.set_leg_position(2, 0, -80, -70)
+xgo.set_leg_position(3, 0, -80, -70)
+xgo.set_leg_position(4, 0, -80, -70)
+time.sleep(2)
+# Grabar esta pose con el número 2
+xgo.record_pose(2)
+print("Pose 'Ancha' grabada con el número 2")
+time.sleep(1)
+xgo.stand()</pre>
                             </div>
                         </div>
                     </div>
@@ -250,23 +253,23 @@ xgo.body_translation(['x', 0]) # Volver al centro</pre>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Excelente trabajo! Ahora que ya tienen sus ideas, reúnanse en sus equipos. Compartan sus <strong>"secuencias de control"</strong> y analicen el código. ¿Qué significa un valor negativo en <strong>`body_rotation`</strong>? ¿Y en <strong>`body_translation`</strong>? ¿Qué eje controla la altura? Discutan y asegúrense de que todos entiendan los códigos del equipo.</p>
+                                <p class="dialogue assistant">¡Excelente trabajo! Ahora reúnanse en sus equipos. Compartan sus <strong>"diseños de poses"</strong> y analicen el código. ¿Qué significan los números X, Y y Z en <strong>`xgo.set_leg_position(1, 0, -60, -50)`</strong>? ¿Qué es el número que usamos en <strong>`record_pose(1)`</strong>? Discutan cómo la <strong>cinemática inversa</strong> nos ahorra el trabajo de calcular los ángulos.</p>
                             </div>
                         </div>
                     </div>
                     <div class="step-card">
                         <div class="step-content">
                             <h3>Paso 2: Planificación de Pruebas (Actividad Clave) ⏰ 4 minutos</h3>
-                            <p>(Proyectar Diapositiva 9) Guía a los equipos para que creen su entregable: un "Plan de Control Postural" ordenado.</p>
+                            <p>(Proyectar Diapositiva 9) Guía a los equipos para que creen su entregable: un "Catálogo de Poses" ordenado.</p>
                         </div>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Creen su <strong>'Plan de Control Postural'</strong> para la próxima clase! Decidan el orden en que probarán estas secuencias. Este será su plan de acción. Aquí tienen un ejemplo:</p>
+                                <p class="dialogue assistant">¡Creen su <strong>'Catálogo de Poses'</strong> para la próxima clase! Decidan qué poses van a grabar y cómo las van a probar. Este será su plan de acción. Aquí tienen un ejemplo:</p>
                                 <ul>
-                                    <li><p class="dialogue assistant"><strong>Prueba 1: "Secuencia de Inclinación"</strong> de [Alumno 1].</p></li>
-                                    <li><p class="dialogue assistant"><strong>Prueba 2: "Desplazamiento Postural"</strong> de [Alumno 2].</p></li>
-                                    <li><p class="dialogue assistant"><strong>Prueba 3 (Desafío):</strong> Probar la <strong>auto-estabilización</strong>. Ejecutar un <strong>`xgo.stand()`</strong> y luego, con cuidado, inclinar la base sobre la que está parado el robot. ¿Qué debería hacer el robot? (Respuesta: Mantenerse de pie, compensando la inclinación).</p></li>
+                                    <li><p class="dialogue assistant"><strong>Prueba 1: Grabar "Dar la Pata" (Pose 1)</strong>. Resultado esperado: El robot levanta la pata y la pose se guarda en la memoria.</p></li>
+                                    <li><p class="dialogue assistant"><strong>Prueba 2: Grabar "Postura Ancha" (Pose 2)</strong>. Resultado esperado: El robot se ensancha y la pose se guarda.</p></li>
+                                    <li><p class="dialogue assistant"><strong>Prueba 3 (Desafío):</strong> Crear un nuevo programa que no define poses, solo las ejecuta. Usar <strong>`xgo.set_to_pose(1)`</strong> y <strong>`xgo.set_to_pose(2)`</strong> para ver si el robot recuerda las poses que grabamos. ¿Funcionará?</p></li>
                                 </ul>
                             </div>
                         </div>
@@ -286,7 +289,7 @@ xgo.body_translation(['x', 0]) # Volver al centro</pre>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Muy bien, equipos! Para cerrar, un portavoz de cada equipo va a compartir el nombre de una de sus <strong>"secuencias de control"</strong> y el concepto que probarán en la próxima sesión. Por ejemplo: "Vamos a probar la 'Secuencia de Inclinación y Altura' y luego el desafío de la <strong>auto-estabilización</strong>".</p>
+                                <p class="dialogue assistant">¡Muy bien, equipos! Para cerrar, un portavoz de cada equipo va a compartir el nombre de una de las <strong>poses</strong> que diseñaron y qué esperan lograr con ella. Por ejemplo: "Diseñamos la 'Pose de Descanso' para que el robot gaste menos energía".</p>
                             </div>
                         </div>
                     </div>
@@ -298,7 +301,7 @@ xgo.body_translation(['x', 0]) # Volver al centro</pre>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Genial! Han diseñado movimientos que requieren un increíble nivel de <strong>control interno</strong> del robot. En la próxima clase, veremos si la <strong>'caja negra'</strong> de su <strong>IMU</strong> y sus <strong>bucles de control</strong> funcionan tan bien como esperamos. ¡Prepárense para poner a prueba el equilibrio de sus robots!</p>
+                                <p class="dialogue assistant">¡Genial! Han diseñado posturas que aprovechan la increíble flexibilidad del robot. En la próxima clase, vamos a grabar estas <strong>poses</strong> en la memoria del XGO y luego crearemos secuencias para que las ejecute. ¡Prepárense para convertir al robot en un verdadero actor!</p>
                             </div>
                         </div>
                     </div>
