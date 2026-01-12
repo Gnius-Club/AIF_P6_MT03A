@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook: Sesión 9 - 6to Primaria</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Playbook-P6-TM03</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook: Sesión 9 - 6to Primaria</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 3 - 6o de Primaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -28,7 +27,6 @@
             </div>
         </div>
     </header>
-
     <div class="main-container">
         <aside class="activity-list">
             <h2>Actividades</h2>
@@ -41,275 +39,405 @@
                 <li><a href="#activity-5">5</a></li>
             </ul>
         </aside>
-
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
             <div class="activity-card" id="activity-0">
-                <h2><span class="book-icon">📝</span> De un Vistazo Sesión Gnius</h2>
-                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
-                <div class="overview-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
-                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Objetivos de Aprendizaje</strong>
-                                    <ul>
-                                        <li>Comprender los <strong>grados de libertad</strong> aplicados a las patas.</li>
-                                        <li>Usar la <strong>API</strong> para definir, guardar y reproducir <strong>poses</strong>.</li>
-                                        <li>Relacionar <strong>cinemática directa e inversa</strong> con el movimiento.</li>
-                                        <li>Aplicar poses para <strong>estabilidad</strong> o <strong>expresión corporal</strong>.</li>
-                                    </ul>
-                                    <h4>Vocabulario Clave:</h4>
-                                    <ul>
-                                      <li><b>Grados de Libertad (DoF):</b> Cada articulación independiente en una pata del robot.</li>
-                                      <li><b>Pose:</b> Una configuración específica y guardada de todas las articulaciones del robot.</li>
-                                      <li><b>Cinemática Inversa:</b> El cálculo que hace el robot para saber cómo mover sus articulaciones para que su pata llegue a un punto en el espacio.</li>
-                                    </ul>
-                                    <strong>Secuencia de Clase</strong>
-                                    <ul>
-                                        <li>⚡Saludo de I.A. con todos</li>
-                                        <li>⚡A.I. GYM (Análisis de Poses y Cinemática)</li>
-                                        <li>⚡VIBE CODING (Diseño Individual de Poses)</li>
-                                        <li>⚡ANÁLISIS DE CÓDIGO Y PLANIFICACIÓN DE PRUEBAS</li>
-                                        <li>⚡GNIUS STORM (Cierre de la Sesión)</li>
-                                    </ul>
-                                    <strong>Entregable Clave</strong>
-                                    <ul>
-                                        <li><strong>Catálogo de Poses</strong> documentado por cada equipo, listo para ser implementado en la próxima sesión.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <strong>Materiales Específicos</strong>
-                                    <ul>
-                                        <li>Proyector o pantalla interactiva.</li>
-                                        <li>Conexión a internet estable.</li>
-                                        <li>Acceso al entorno de programación Python.</li>
-                                        <li>Robots XGO V2 (1 por cada 4 estudiantes), cargados.</li>
-                                        <li>Presentación de diapositivas.</li>
-                                        <li>Chat de Agente Gnius (Xolo) activo.</li>
-                                    </ul>
-                                    <strong>Preparación Previa para ESTA Sesión</strong>
-                                    <ol>
-                                        <li><strong>Revisión de Misión (Interna)</strong>
-                                            <ul>
-                                                <li>Verificar conexión a internet y entorno Python.</li>
-                                                <li>Asegurar carga de los robots XGO V2.</li>
-                                                <li>Tener la presentación de diapositivas lista.</li>
-                                                <li>Probar el chat Agente Gnius (Xolo).</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Familiarización</strong> Revisar el flujo de la sesión, diálogos y tiempos.</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> Usar el Micro:Bit y el robot XGO para controlar la postura y los límites de inclinación mediante el IMU y comprender la propiocepción robótica y el control compartido humano-robot.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Quiero aprender cómo el XGO mantiene su equilibrio usando el IMU y comandos en Python. Primero explícame qué es el IMU y por qué funciona como el “sexto sentido” del robot. Después enséñame cómo controlar postura con xgo.body_move(x,y,z), xgo.roll(angle) y xgo.pitch(angle) para que el robot se incline sin caerse. Luego guíame en una práctica progresiva: inclinación leve → media → límite seguro. Incluye un paso para observar qué hace el robot cuando está a punto de perder estabilidad (autoajuste).</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Propiocepción Robótica: Es como el "sexto sentido" del robot que le permite saber en qué posición está su cuerpo y cómo mantener el equilibrio.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar el sensor de movimiento (IMU) del robot XGO para controlar su inclinación y postura.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes ángulos de inclinación (roll y pitch) para entender los límites de estabilidad del robot.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Robot XGO (1 por cada 4 estudiantes)</label> <label><input type="checkbox"> Micro:bit (1 por cada 4 estudiantes)</label>
+                        <label><input type="checkbox"> Acceso a MakeCode (https://makecode.microbit.org/) con extensión XGO instalada</label>
+                        <label><input type="checkbox"> Superficie plana y despejada para las pruebas</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa programación con BLOQUES en MakeCode</label>
+                        <label><input type="checkbox"> 📋 Para agregar extensión: En MakeCode → Extensiones → Buscar 'XGO' → Agregar</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Manipular con cuidado, no forzar las articulaciones del XGO, mantener en superficie plana y verificar que la batería esté cargada.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre propiocepción robótica y el uso del IMU (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si el robot XGO no responde:</strong> Verificar que la batería esté cargada y el interruptor en ON. Revisar que el micro:bit esté bien insertado en la ranura.</li>
+                            <li><strong>Si el robot se cae constantemente:</strong> Revisar que los ángulos programados no excedan los límites físicos. Verificar que la superficie sea plana y no resbaladiza.</li>
+                            <li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
             <div class="activity-card" id="activity-1">
-                <h2>⚡ Actividad 1: Saludo de I.A. con todos ⏰ 2 minutos</h2>
-                <p><strong>Propósito:</strong> Crear un ambiente acogedor y guiar a los estudiantes para que activen y personalicen la interacción con el agente de IA, Xolo.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Instrucción Inicial ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 2) Da la bienvenida a los estudiantes y guíalos para que activen a Xolo en el chat.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Hola, escultores de robots! 👋 ¡Bienvenidos a una misión sobre <strong>poses</strong> y <strong>control preciso</strong>! Hoy vamos a enseñarle al XGO a adoptar posturas específicas, como un gimnasta. Antes de empezar, activen a nuestro amigo <strong>Xolo</strong>. Salúdenlo en el chat con su nombre y algo que les interese. Por ejemplo, "Hola Xolo, soy David y me gusta dibujar personajes en diferentes poses".</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Monitoreo y Verificación ⏰ 1 minuto</h3>
-                            <p>Asegúrate de que todos los estudiantes hayan recibido una respuesta de Xolo para continuar.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Fantástico, veo que Xolo ya está listo para posar con ustedes! Asegúrense de que todos hayan escrito su nombre y sus gustos. Si Xolo no les ha respondido, ¡avísenme!</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "¡Hoy le daremos un sexto sentido de equilibrio a sus robots XGO!".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre Equilibrio y propiocepción robótica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A controlar la postura del XGO para que mantenga el equilibrio como un atleta profesional.</p>
+                        <p><strong>Aplicación real:</strong> Los robots de rescate en terrenos difíciles usan esta tecnología para no caerse mientras exploran zonas peligrosas.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 2: A.I. GYM -->
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2 A.I. GYM (Análisis de Poses y Cinemática) ⏰ 12 minutos</h2>
-                <p><strong>Propósito</strong> Introducir los conceptos de grados de libertad por pata, cinemática inversa y la API para grabar y reproducir poses.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Presentación Conceptual y Comando para Xolo ⏰ 6 minutos</h3>
-                            <p>(Proyectar Diapositiva 3) Presenta el desafío de controlar las patas individualmente y guía a los alumnos para que pidan la explicación a Xolo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Excelente! Ahora vamos al <strong>A.I. GYM</strong>. Ya hemos hecho que el robot camine y se equilibre, pero ¿cómo le decimos exactamente dónde poner una pata? Cada pata del XGO tiene 3 articulaciones, es decir, 3 <strong>grados de libertad</strong>. ¡Controlar las 4 patas a la vez es un problema matemático complejo!</p>
-                                <p class="dialogue assistant">Este problema se llama <strong>cinemática inversa</strong>: nosotros le decimos al robot "quiero que tu pata esté en la coordenada X, Y, Z", y su cerebro calcula los ángulos exactos de cada articulación para lograrlo. Por suerte, la <strong>API</strong> del robot lo hace por nosotros. Hoy aprenderemos a usarla para crear y guardar <strong>poses</strong>.</p>
-                                <p class="dialogue assistant">Para que la explicación sea personalizada, escriban en el chat el siguiente comando: <strong>"Xolo, mi perfil es [escribe aquí tu perfil] y necesito programar al XGO para crear y guardar posturas específicas. Quiero comprender cómo controlar cada pierna y usar la cinemática sin calcular ángulos manuales gracias a la API. Enséñame el código para grabar y reproducir poses estables.'"</strong></p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Monitoreo de Interacción y Síntesis ⏰ 6 minutos</h3>
-                            <p>(Proyectar Diapositivas 4 y 5) Monitorea a los alumnos mientras interactúan con Xolo y resume los puntos clave que están aprendiendo.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo el IMU funciona como un nivel digital para detectar la inclinación.</li>
+                            <li>Introduce el concepto de propiocepción o cómo el robot siente su propio cuerpo.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar el robot XGO para realizar movimientos de inclinación controlados.</li>
+                            <li>Aprender sobre la retroalimentación y el control compartido.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">(Mientras los alumnos interactúan con Xolo) ¡Muy bien! Xolo les está explicando cómo la <strong>cinemática inversa</strong> es la "magia" que nos permite controlar la posición de las patas fácilmente. ¡Es una <strong>caja negra</strong> matemática muy poderosa!</p>
-                                <p class="dialogue assistant">Fíjense en los comandos que les muestra: <strong>`xgo.set_leg_position()`</strong> para controlar una pata individual, y lo más importante, <strong>`xgo.record_pose()`</strong> para guardar una pose y <strong>`xgo.set_to_pose()`</strong> para reproducirla. ¡Es como tomarle una foto a la postura del robot y luego mostrársela para que la imite!</p>
-                            </div>
-                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar el robot XGO para controlar su postura y entender la propiocepción.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">Ahora vamos a descubrir el secreto detrás del equilibrio de los robots. Por favor, abran su chat con XOLO y denle un saludo entusiasta. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy sobre el robot XGO y su sensor IMU. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Él les explicará cómo el robot usa su 'sexto sentido' para no caerse. Aprovechen para preguntarle todo lo que quieran sobre cómo el XGO siente su propia posición.</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3 VIBE CODING (Diseño Individual de Poses) ⏰ 14 minutos</h2>
-                <p><strong>Propósito</strong> Permitir a los estudiantes diseñar creativamente poses para estabilidad o expresión y obtener el código Python correspondiente de la IA.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Instrucción del Profesor ⏰ 4 minutos</h3>
-                            <p>(Proyectar Diapositiva 6) Motiva a los alumnos a convertirse en "diseñadores de poses" y a describir sus ideas a Xolo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Muy bien, con esos conceptos claros, es momento de ser creativos! Ahora, serán <strong>'diseñadores de poses'</strong>. Piensen en una <strong>pose</strong> específica que quieran que el XGO adopte. Puede ser una pose de ataque, una para estar más estable, o una divertida como levantar una pata. Descríbanle su 'vibe' a Xolo, y él les dará el código para crearla. Si no se les ocurre nada, ¡no hay problema! Escriban en el chat con Xolo el comando exacto: <strong>'Exploremos ideas juntos'</strong>.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Ejemplos de Interacción ⏰ 10 minutos</h3>
-                            <p>(Proyectar Diapositiva 7) Muestra ejemplos de cómo una vibe se traduce en código para que los estudiantes entiendan el proceso.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los Robots XGO conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique el equilibrio extremo del XGO.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar la inclinación y estabilidad del XGO.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Conectar el Micro:bit al XGO y probar la rutina de equilibrio.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a idear una rutina donde el XGO “entrene equilibrio” como un atleta. Quiero que combine inclinaciones, cambios de altura y un mini desplazamiento mientras mantiene estabilidad. Dame una idea de rutina por fases (calentamiento–equilibrio extremo–recuperación) y explica qué hace el IMU en cada fase. Luego dame el código en Python para ejecutarlo, de acuerdo a tu entrenamiento con el robot XGO y Micro:bit."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Basado en esa petición, Xolo podría generar un código para ejecutar su idea. ¡Fíjense bien en cómo se estructura!</p>
-                                <p class="dialogue assistant">Para una vibe como "quiero crear una pose donde el robot levanta su pata delantera derecha como si fuera a dar la mano", Xolo generaría este código:</p>
-                                <pre class="dialogue assistant" style="color: #d32f2f;"># Pose: Dar la Pata
-import xgo, time
-# Número de la pata: 1=Frontal Derecha, 2=Frontal Izquierda, 3=Trasera Derecha, 4=Trasera Izquierda
-# Coordenadas: [x, y, z] desde el hombro
-xgo.set_leg_position(1, 0, -60, -50) # Levanta y adelanta la pata 1
-time.sleep(2)
-# Grabar esta pose con el número 1
-xgo.record_pose(1) 
-print("Pose 'Dar la Pata' grabada con el número 1")
-time.sleep(1)
-# Volver a la normalidad
-xgo.stand()</pre>
-                                <p class="dialogue assistant">Y para una vibe como "quiero que adopte una postura más ancha y baja para máxima estabilidad", este sería el código:</p>
-                                <pre class="dialogue assistant" style="color: #d32f2f;"># Pose: Postura Ancha
-import xgo, time
-# Mover cada pata hacia afuera y un poco hacia abajo
-xgo.set_leg_position(1, 0, -80, -70)
-xgo.set_leg_position(2, 0, -80, -70)
-xgo.set_leg_position(3, 0, -80, -70)
-xgo.set_leg_position(4, 0, -80, -70)
-time.sleep(2)
-# Grabar esta pose con el número 2
-xgo.record_pose(2)
-print("Pose 'Ancha' grabada con el número 2")
-time.sleep(1)
-xgo.stand()</pre>
-                            </div>
-                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El XGO logra mantener la pose de equilibrio sin tambalearse?</li>
+                            <li>¿Qué sucede si intentas inclinar el robot más allá del ángulo que XOLO te recomendó?</li>
+                            <li>¿El robot responde igual a las inclinaciones laterales (roll) que a las frontales (pitch)?</li>
+                            <li>¿Cómo demuestra el robot su 'propiocepción' cuando ajusta sus patas para no caerse?</li>
+                            <li>En el 'control compartido', ¿quién decide el ángulo y quién decide cómo no caerse?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear una rutina de entrenamiento para nuestro atleta robótico! Vamos a usar a XOLO para idear una secuencia donde el XGO demuestre su equilibrio extremo. El flujo es sencillo: primero ideamos la rutina con XOLO, definimos el 'VIBE', obtenemos el GCS, lo pasamos a bloques en MakeCode y finalmente experimentamos con el robot real. Por ejemplo, podrían programar una fase de calentamiento con inclinaciones suaves y luego un reto de equilibrio en una sola dirección. Recuerden observar las preguntas de experimentación en la pantalla mientras prueban. Al final, entregaremos el hardware con cuidado. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar.</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con las inclinaciones básicas. ¿Puedes enseñarme cómo hacer que mi XGO mantenga el equilibrio mientras levanta una pata?"</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
             <div class="activity-card" id="activity-4">
-                <h2>⚡ Actividad 4 ANÁLISIS DE CÓDIGO Y PLANIFICACIÓN DE PRUEBAS ⏰ 7 minutos</h2>
-                <p><strong>Propósito</strong> Fomentar la colaboración, el análisis de código y la creación de un plan de pruebas estructurado para la siguiente sesión.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Análisis en Equipo ⏰ 3 minutos</h3>
-                            <p>(Proyectar Diapositiva 8) Organiza a los estudiantes en equipos para que compartan y analicen sus fragmentos de código.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Excelente trabajo! Ahora reúnanse en sus equipos. Compartan sus <strong>"diseños de poses"</strong> y analicen el código. ¿Qué significan los números X, Y y Z en <strong>`xgo.set_leg_position(1, 0, -60, -50)`</strong>? ¿Qué es el número que usamos en <strong>`record_pose(1)`</strong>? Discutan cómo la <strong>cinemática inversa</strong> nos ahorra el trabajo de calcular los ángulos.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Planificación de Pruebas (Actividad Clave) ⏰ 4 minutos</h3>
-                            <p>(Proyectar Diapositiva 9) Guía a los equipos para que creen su entregable: un "Catálogo de Poses" ordenado.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué ángulos de inclinación funcionaron bien sin que el robot perdiera estabilidad.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué movimientos de equilibrio realizó mejor tu robot XGO? ¿Qué te sorprendió de su autoajuste?</p>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Creen su <strong>'Catálogo de Poses'</strong> para la próxima clase! Decidan qué poses van a grabar y cómo las van a probar. Este será su plan de acción. Aquí tienen un ejemplo:</p>
-                                <ul>
-                                    <li><p class="dialogue assistant"><strong>Prueba 1: Grabar "Dar la Pata" (Pose 1)</strong>. Resultado esperado: El robot levanta la pata y la pose se guarda en la memoria.</p></li>
-                                    <li><p class="dialogue assistant"><strong>Prueba 2: Grabar "Postura Ancha" (Pose 2)</strong>. Resultado esperado: El robot se ensancha y la pose se guarda.</p></li>
-                                    <li><p class="dialogue assistant"><strong>Prueba 3 (Desafío):</strong> Crear un nuevo programa que no define poses, solo las ejecuta. Usar <strong>`xgo.set_to_pose(1)`</strong> y <strong>`xgo.set_to_pose(2)`</strong> para ver si el robot recuerda las poses que grabamos. ¿Funcionará?</p></li>
-                                </ul>
-                            </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi robot XGO mantuvo el equilibrio en ángulos de pitch y roll. Me sorprendió que el robot se autoajusta solo para no caerse."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
             <div class="activity-card" id="activity-5">
-                <h2>⚡ Actividad 5 GNIUS STORM (Cierre de la Sesión) ⏰ 5 minutos</h2>
-                <p><strong>Propósito</strong> Realizar un cierre dinámico donde los equipos comparten sus planes y se genera expectación para la sesión de implementación.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Compartir Planes ⏰ 3 minutos</h3>
-                            <p>(Proyectar Diapositiva 10) Pide a un portavoz de cada equipo que comparta brevemente su plan.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Muy bien, equipos! Para cerrar, un portavoz de cada equipo va a compartir el nombre de una de las <strong>poses</strong> que diseñaron y qué esperan lograr con ella. Por ejemplo: "Diseñamos la 'Pose de Descanso' para que el robot gaste menos energía".</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Cierre y Próximos Pasos ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 11) Concluye la sesión, validando el trabajo de los estudiantes y adelantando la emoción de la siguiente clase.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Genial! Han diseñado posturas que aprovechan la increíble flexibilidad del robot. En la próxima clase, vamos a grabar estas <strong>poses</strong> en la memoria del XGO y luego crearemos secuencias para que las ejecute. ¡Prepárense para convertir al robot en un verdadero actor!</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
-</html>
+</html></html>
