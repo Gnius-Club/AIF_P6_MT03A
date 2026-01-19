@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook-P6-TM2</title>
+    <title>Playbook-P6-TM03</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 2 - 6o de Primaria</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 3 - 6o de Primaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
                 <span id="global-timer">⏱️ 40:00</span>
@@ -51,7 +51,7 @@
                 <div class="command-section">
                     <h3>🎯 Objetivo de Aprendizaje</h3>
                     <div class="objective-box">
-                        <p><strong>Los estudiantes podrán:</strong> Usar Micro:Bit + XGO para controlar el desplazamiento lineal y rotación con parámetros de velocidad y comprender el Gait planning como coordinación interna y robótica biomimética.</p>
+                        <p><strong>Los estudiantes podrán:</strong> Usar el Micro:Bit y el robot XGO para controlar la postura y los límites de inclinación mediante el IMU y comprender la propiocepción robótica y el control compartido humano-robot.</p>
                     </div>
                 </div>
                 <div class="command-section xolo-prompt">
@@ -63,7 +63,7 @@
                                 <i class="fas fa-copy"></i> Copiar
                             </button>
                         </div>
-                        <pre id="main-prompt">Quiero aprender a programar rutas simples con el XGO usando comandos de avance y giro. Explícame primero qué significa “planificación de marcha” (gait planning) y por qué el robot necesita coordinar sus patas aunque yo solo use un comando como move_forward. Luego enséñame cómo usar: xgo.move_forward(speed), xgo.move_backward(speed), xgo.rotate_left(speed) y xgo.rotate_right(speed) para crear una ruta en forma de “L” o de “cuadrado”. Incluye protocolos de seguridad antes de ejecutar (ej: superficie estable, espacio libre, velocidad moderada). Después dame un mini reto: “Haz que el XGO avance 3 pasos, gire, avance 2 pasos y regrese al inicio”. Finalmente, evalúame con 3 preguntas rápidas para comprobar que entendí.</pre>
+                        <pre id="main-prompt">Quiero aprender cómo el XGO mantiene su equilibrio usando el IMU y comandos en Python. Primero explícame qué es el IMU y por qué funciona como el “sexto sentido” del robot. Después enséñame cómo controlar postura con xgo.body_move(x,y,z), xgo.roll(angle) y xgo.pitch(angle) para que el robot se incline sin caerse. Luego guíame en una práctica progresiva: inclinación leve → media → límite seguro. Incluye un paso para observar qué hace el robot cuando está a punto de perder estabilidad (autoajuste).</pre>
                     </div>
                 </div>
                 <div class="command-section">
@@ -72,17 +72,17 @@
                         <div class="essential-card">
                             <div class="essential-icon">🎓</div>
                             <h4>Concepto Clave</h4>
-                            <p>Gait Planning (Planificación de marcha): Es como cuando nosotros caminamos; nuestro cerebro coordina cada músculo de las piernas para no caernos, igual que el robot coordina sus patas para moverse suavemente.</p>
+                            <p>Propiocepción Robótica: Es como el "sexto sentido" del robot que le permite saber en qué posición está su cuerpo y cómo mantener el equilibrio.</p>
                         </div>
                         <div class="essential-card">
                             <div class="essential-icon">🔧</div>
                             <h4>Habilidad Técnica</h4>
-                            <p>Usar el robot perro XGO para avanzar, retroceder y girar con precisión.</p>
+                            <p>Usar el sensor de movimiento (IMU) del robot XGO para controlar su inclinación y postura.</p>
                         </div>
                         <div class="essential-card">
                             <div class="essential-icon">🧪</div>
                             <h4>Experimentación</h4>
-                            <p>Probar con diferentes velocidades y tiempos de espera para entender limitaciones de equilibrio y precisión.</p>
+                            <p>Probar con diferentes ángulos de inclinación (roll y pitch) para entender los límites de estabilidad del robot.</p>
                         </div>
                         <div class="essential-card">
                             <div class="essential-icon">💬</div>
@@ -96,13 +96,13 @@
                     <div class="materials-checklist">
                         <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
                         <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
-                        <label><input type="checkbox"> Micro:Bit + Robot XGO (1 por cada 4 estudiantes)</label>
+                        <label><input type="checkbox"> Robot XGO (1 por cada 4 estudiantes)</label> <label><input type="checkbox"> Micro:bit (1 por cada 4 estudiantes)</label>
                         <label><input type="checkbox"> Acceso a MakeCode (https://makecode.microbit.org/) con extensión XGO instalada</label>
-                        <label><input type="checkbox"> Cinta adhesiva para marcar rutas en el piso</label>
+                        <label><input type="checkbox"> Superficie plana y despejada para las pruebas</label>
                         <label><input type="checkbox"> ⚠️ Esta misión usa programación con BLOQUES en MakeCode</label>
                         <label><input type="checkbox"> 📋 Para agregar extensión: En MakeCode → Extensiones → Buscar 'XGO' → Agregar</label>
                     </div>
-                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Manipular con cuidado, no forzar las articulaciones de las patas, mantener en superficie plana y verificar que la batería esté bien conectada.</p>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Manipular con cuidado, no forzar las articulaciones del XGO, mantener en superficie plana y verificar que la batería esté cargada.</p>
                 </div>
                 <div class="command-section">
                     <h3>🗓️ Secuencia de la Misión (40 min)</h3>
@@ -120,7 +120,7 @@
                             <div class="timeline-content">
                                 <strong>A.I. Gym</strong>
                                 <span class="time-badge">8 min</span>
-                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre planificación de marcha y comandos de movimiento (sin prompt específico).</p>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre propiocepción robótica y el uso del IMU (sin prompt específico).</p>
                             </div>
                         </div>
                         <div class="timeline-item">
@@ -154,9 +154,9 @@
                     <div class="troubleshooting-list">
                         <ul>
                             <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
-                            <li><strong>Si el XGO no responde:</strong> Verificar que la batería esté cargada y bien conectada. Revisar que el micro:bit esté correctamente insertado en la ranura.</li>
-<li><strong>Si el robot pierde el equilibrio:</strong> Reducir la velocidad de los giros o aumentar el tiempo entre comandos de movimiento.</li>
-<li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                            <li><strong>Si el robot XGO no responde:</strong> Verificar que la batería esté cargada y el interruptor en ON. Revisar que el micro:bit esté bien insertado en la ranura.</li>
+                            <li><strong>Si el robot se cae constantemente:</strong> Revisar que los ángulos programados no excedan los límites físicos. Verificar que la superficie sea plana y no resbaladiza.</li>
+                            <li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
                         </ul>
                     </div>
                 </div>
@@ -177,14 +177,14 @@
                             <li>Dar la bienvenida con energía.</li>
                             <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
                             <li>Proyecta diapositiva 1 con el I Can Statement.</li>
-                            <li>Motiva: "Hoy le daremos sentido de dirección a sus robots XGO".</li>
+                            <li>Motiva: "¡Hoy le daremos un sexto sentido de equilibrio a sus robots XGO!".</li>
                         </ul>
                     </div>
                     <div class="role-card role-xolo">
                         <h4>🤖 Rol de XOLO</h4>
                         <ul>
                             <li>XOLO ya está listo y conoce a cada estudiante.</li>
-                            <li>Sabe que hoy toca aprender sobre Rutas Autónomas y Gait Planning.</li>
+                            <li>Sabe que hoy toca aprender sobre Equilibrio y propiocepción robótica.</li>
                         </ul>
                     </div>
                     <div class="role-card role-student">
@@ -200,8 +200,8 @@
                     <h4>📊 Diapositiva 1: I Can Statement</h4>
                     <div class="slide-content">
                         <p><strong>🎯 Hoy seré capaz de:</strong></p>
-                        <p class="highlight-text">🤖 A programar rutas autónomas para que el XGO patrulle como un explorador real.</p>
-                        <p><strong>Aplicación real:</strong> Los robots de rescate en zonas de desastre usan esta tecnología para navegar por terrenos difíciles de forma autónoma.</p>
+                        <p class="highlight-text">🤖 A controlar la postura del XGO para que mantenga el equilibrio como un atleta profesional.</p>
+                        <p><strong>Aplicación real:</strong> Los robots de rescate en terrenos difíciles usan esta tecnología para no caerse mientras exploran zonas peligrosas.</p>
                         <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
@@ -230,8 +230,8 @@
                         <p class="xolo-status">✅ XOLO ACTIVO</p>
                         <ul>
                             <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
-                            <li>Explica cómo el robot coordina sus patas (Gait planning) para moverse.</li>
-                            <li>Introduce el concepto de robótica biomimética y grados de libertad (DoF).</li>
+                            <li>Explica cómo el IMU funciona como un nivel digital para detectar la inclinación.</li>
+                            <li>Introduce el concepto de propiocepción o cómo el robot siente su propio cuerpo.</li>
                             <li>Responde dudas sobre los conceptos.</li>
                         </ul>
                     </div>
@@ -239,8 +239,8 @@
                         <h4>👦 Rol del Alumno</h4>
                         <ul>
                             <li>Abrir el chat con XOLO y saludarlo.</li>
-                            <li>Aprender a usar el XGO para avanzar, retroceder y girar.</li>
-                            <li>Aprender sobre cómo los robots imitan el movimiento de los seres vivos.</li>
+                            <li>Aprender a usar el robot XGO para realizar movimientos de inclinación controlados.</li>
+                            <li>Aprender sobre la retroalimentación y el control compartido.</li>
                             <li>Despejar todas sus dudas preguntando a XOLO.</li>
                         </ul>
                     </div>
@@ -253,14 +253,14 @@
                             <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
                         <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
-                        <p class="highlight-text">🎯 Objetivo: Aprender a usar el XGO para crear rutas y entender la coordinación de sus patas.</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar el robot XGO para controlar su postura y entender la propiocepción.</p>
                     </div>
                 </div>
                 
                 <div class="optional-script">
                     <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
                     <div class="collapsible-content">
-                        <p class="dialogue assistant">¡Hola a todos! Ahora vamos a entrar al A.I. Gym. Abran su chat con XOLO y salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Hoy aprenderán cómo su robot XGO coordina sus patas para caminar, algo llamado 'Gait Planning', y cómo darle órdenes para que se mueva por el salón. Si tienen cualquier duda sobre cómo se mueve un robot biomimético, ¡pregúntenle a XOLO sin miedo!</p>
+                        <p class="dialogue assistant">Ahora vamos a descubrir el secreto detrás del equilibrio de los robots. Por favor, abran su chat con XOLO y denle un saludo entusiasta. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy sobre el robot XGO y su sensor IMU. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Él les explicará cómo el robot usa su 'sexto sentido' para no caerse. Aprovechen para preguntarle todo lo que quieran sobre cómo el XGO siente su propia posición.</p>
                     </div>
                 </div>
             </div>
@@ -287,7 +287,7 @@
                         <h4>🤖 Rol de XOLO</h4>
                         <p class="xolo-status">✅ XOLO ACTIVO</p>
                         <ul>
-                            <li>Ayuda a desarrollar una idea y un VIBE que aplique rutas de patrullaje creativas.</li>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique el equilibrio extremo del XGO.</li>
                             <li>Entrega el GCS de la idea del genio.</li>
                             <li>Resuelve errores de sintaxis o lógica.</li>
                         </ul>
@@ -295,10 +295,10 @@
                     <div class="role-card role-student">
                         <h4>👦 Rol del Alumno</h4>
                         <ul>
-                            <li>Trabajar con XOLO una idea y un VIBE para usar el movimiento del XGO.</li>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar la inclinación y estabilidad del XGO.</li>
                             <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
                             <li>Depurar su programa con XOLO si hay errores.</li>
-                            <li>Conectar el micro:bit al XGO y probar la ruta.</li>
+                            <li>Conectar el Micro:bit al XGO y probar la rutina de equilibrio.</li>
                         </ul>
                     </div>
                 </div>
@@ -307,29 +307,29 @@
                     <div class="slide-content">
                         <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
                         <div class="prompt-box">
-                            <pre>"Ayúdame a imaginar un “circuito de entrenamiento” para el XGO como si fuera un perro robot explorador. Quiero que diseñe una ruta con giros, avances y retrocesos como si estuviera patrullando un territorio. Dame 3 ideas de rutas (fácil, media, difícil) y explícame qué cambia en cada una (velocidad, giros, distancia). Luego genera el código en Python para la ruta media, usando comandos básicos de movimiento. Finalmente incluye una idea creativa para que el robot “salude” al final de la patrulla con un movimiento simple."</pre>
+                            <pre>"Ayúdame a idear una rutina donde el XGO “entrene equilibrio” como un atleta. Quiero que combine inclinaciones, cambios de altura y un mini desplazamiento mientras mantiene estabilidad. Dame una idea de rutina por fases (calentamiento–equilibrio extremo–recuperación) y explica qué hace el IMU en cada fase. Luego dame el código en Python para ejecutarlo, de acuerdo a tu entrenamiento con el robot XGO y Micro:bit."</pre>
                         </div>
                         <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
                         <ul>
-                            <li>¿El XGO completó la ruta sin perder el equilibrio?</li>
-                            <li>¿Qué pasa si aumentas la velocidad al máximo en un giro cerrado?</li>
-                            <li>¿Funciona igual la ruta en una superficie lisa que en una rugosa?</li>
-                            <li>Si el robot coordina sus patas solo, ¿cómo se relaciona esto con el Gait Planning que explicó XOLO?</li>
-                            <li>¿En qué partes del movimiento notas que el robot imita a un animal real (biomimética)?</li>
+                            <li>¿El XGO logra mantener la pose de equilibrio sin tambalearse?</li>
+                            <li>¿Qué sucede si intentas inclinar el robot más allá del ángulo que XOLO te recomendó?</li>
+                            <li>¿El robot responde igual a las inclinaciones laterales (roll) que a las frontales (pitch)?</li>
+                            <li>¿Cómo demuestra el robot su 'propiocepción' cuando ajusta sus patas para no caerse?</li>
+                            <li>En el 'control compartido', ¿quién decide el ángulo y quién decide cómo no caerse?</li>
                         </ul>
                     </div>
                 </div>
                 <div class="optional-script">
                     <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
                     <div class="collapsible-content">
-                        <p class="dialogue assistant">¡Es hora de crear, genios! Vamos a usar lo aprendido para diseñar un circuito de entrenamiento. Pidan a XOLO que los ayude a idear una ruta de patrullaje. El flujo es: idear con XOLO, obtener su VIBE y GCS, pasar eso a bloques en MakeCode y luego experimentar. Por ejemplo, podrían programar a su XGO para que patrulle un cuadrado y termine con un saludo especial. Recuerden probar primero en el simulador. Cuando estén listos, les entregaré el hardware. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar su código.</p>
+                        <p class="dialogue assistant">¡Es hora de crear una rutina de entrenamiento para nuestro atleta robótico! Vamos a usar a XOLO para idear una secuencia donde el XGO demuestre su equilibrio extremo. El flujo es sencillo: primero ideamos la rutina con XOLO, definimos el 'VIBE', obtenemos el GCS, lo pasamos a bloques en MakeCode y finalmente experimentamos con el robot real. Por ejemplo, podrían programar una fase de calentamiento con inclinaciones suaves y luego un reto de equilibrio en una sola dirección. Recuerden observar las preguntas de experimentación en la pantalla mientras prueban. Al final, entregaremos el hardware con cuidado. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar.</p>
                     </div>
                 </div>
                 <div class="challenge-prompt">
                     <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
                     <div class="prompt-box">
                         <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
-                        <p class="challenge-text">"Ya probé con movimientos básicos. ¿Puedes enseñarme cómo hacer que mi XGO realice una secuencia de movimientos de baile combinando giros y cambios de velocidad?"</p>
+                        <p class="challenge-text">"Ya probé con las inclinaciones básicas. ¿Puedes enseñarme cómo hacer que mi XGO mantenga el equilibrio mientras levanta una pata?"</p>
                     </div>
                 </div>
             </div>
@@ -363,7 +363,7 @@
                         <h4>👦 Rol del Alumno</h4>
                         <ul>
                             <li>Demuestra su programa funcionando a otra pareja.</li>
-                            <li>Explica qué comandos de movimiento funcionaron bien.</li>
+                            <li>Explica qué ángulos de inclinación funcionaron bien sin que el robot perdiera estabilidad.</li>
                             <li>Comparte un descubrimiento interesante.</li>
                             <li>Da retroalimentación positiva al compañero.</li>
                         </ul>
@@ -374,12 +374,12 @@
                     <div class="slide-content tps-structure">
                         <div class="tps-phase">
                             <h4>🤔 THINK (30 seg)</h4>
-                            <p>Reflexión individual: ¿Qué giros realizó mejor tu XGO? ¿Qué te sorprendió de su equilibrio?</p>
+                            <p>Reflexión individual: ¿Qué movimientos de equilibrio realizó mejor tu robot XGO? ¿Qué te sorprendió de su autoajuste?</p>
                         </div>
                         <div class="tps-phase">
                             <h4>👥 PAIR (2 min)</h4>
                             <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
-                            <p class="highlight-text">Frase guía: "Mi XGO realizó una ruta de patrullaje con giros precisos. Me sorprendió que coordinara sus patas tan rápido."</p>
+                            <p class="highlight-text">Frase guía: "Mi robot XGO mantuvo el equilibrio en ángulos de pitch y roll. Me sorprendió que el robot se autoajusta solo para no caerse."</p>
                         </div>
                         <div class="tps-phase">
                             <h4>💬 SHARE (2 min)</h4>
